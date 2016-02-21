@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsTheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Death_to_stock_photography_farm_1" translatesAutoresizingMaskIntoConstraints="NO" id="2ei-to-LFf">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2ei-to-LFf" secondAttribute="height" multiplier="30:29" id="tJv-gw-yB4"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oKv-R5-Tx5">
+                                <rect key="frame" x="224" y="62" width="152" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What's the Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDo-gx-ToP">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dDo-gx-ToP" firstAttribute="top" secondItem="oKv-R5-Tx5" secondAttribute="top" id="h5H-Ez-x6o"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter your City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECt-wG-P5y">
+                                <rect key="frame" x="243" y="109" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiW-KQ-max">
+                                <rect key="frame" x="230" y="200" width="141" height="30"/>
+                                <state key="normal" title="What's the weather?"/>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swZ-dg-yuy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuC-af-D1t">
+                                <rect key="frame" x="220" y="150" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7lX-gn-ppK">
+                                <rect key="frame" x="95" y="238" width="411" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SUk-dD-n7i">
+                                        <rect key="frame" x="0.0" y="0.0" width="411" height="150"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lti-v4-bBy">
+                                                <rect key="frame" x="0.0" y="0.0" width="411" height="150"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="3nF-88-mnL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ei-to-LFf" secondAttribute="bottom" id="0Wz-Ab-RLm"/>
+                            <constraint firstItem="7lX-gn-ppK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1X1-QB-cVJ"/>
+                            <constraint firstItem="xiW-KQ-max" firstAttribute="top" secondItem="SuC-af-D1t" secondAttribute="bottom" constant="20" id="8c5-ds-0Kd"/>
+                            <constraint firstItem="2ei-to-LFf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aqg-wy-Khp"/>
+                            <constraint firstItem="SuC-af-D1t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HKs-Xn-Ths"/>
+                            <constraint firstItem="oKv-R5-Tx5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vd4-bg-BKY"/>
+                            <constraint firstItem="SuC-af-D1t" firstAttribute="top" secondItem="ECt-wG-P5y" secondAttribute="bottom" constant="20" id="cLA-Pr-Y7j"/>
+                            <constraint firstItem="2ei-to-LFf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="csK-ee-md1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7lX-gn-ppK" secondAttribute="bottom" constant="10" id="miv-4r-hvW"/>
+                            <constraint firstItem="ECt-wG-P5y" firstAttribute="top" secondItem="oKv-R5-Tx5" secondAttribute="bottom" constant="26" id="sf7-dE-gak"/>
+                            <constraint firstItem="xiW-KQ-max" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tFH-oE-2vS"/>
+                            <constraint firstItem="ECt-wG-P5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xIG-ti-5ne"/>
+                            <constraint firstAttribute="trailing" secondItem="2ei-to-LFf" secondAttribute="trailing" id="z2P-VZ-AnD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="SuC-af-D1t" id="QEf-dS-CnD"/>
+                        <outlet property="resultLabel" destination="Lti-v4-bBy" id="K9x-Eq-UPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="202"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Death_to_stock_photography_farm_1" width="5472" height="3648"/>
+    </resources>
+</document>
